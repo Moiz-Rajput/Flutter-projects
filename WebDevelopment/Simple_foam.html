@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+				<title>
+My first page
+				</title>
+	</head>
+					<body>
+
+
+Please type ID and Password for login:
+  
+<!--ID section-->
+	<form>
+
+
+<br><br><label for = "text"><b>ID:</b></label>
+<input type ="text" id="std_id"><br><br>
+
+
+<label for ="password" name="std_password "><b>Password:</b></label>
+<input type ="password" id="std_password" minlength ="8" maxlength="13">
+</form>
+<br><button type ="button" onclick="checker()">Login</button>
+
+	</form>
+</body>
+
+</html>
+
+<script>
+	function checker(){
+	
+	if("std_id===ali"&&"std_password===123"){
+	
+	
+			document.write("Login Successfull!")
+	
+	
+	}
+	
+	else{
+	document.write("Please enter a valid id and password")
+	
+	}
+	}
+	
+	
+	</script>

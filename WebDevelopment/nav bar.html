@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0px;
+        }
+        /*img{
+
+
+padding: 5px 5px;
+background-color:green;
+border:none;
+display:inline-block;
+border:green solid 0px;  
+width: 2.42%;
+
+}*/
+        /*div {
+    margin-left: 0px;
+    padding: 1.1% 37% 1%  50%;
+    background-color:green;
+ 
+    display: inline-block;
+    overflow: hidden;
+    color: honeydew;
+    width: 10%;
+    position:fixed;
+    top: 0%;
+
+
+   
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}*/
+        
+        div {
+            background-color: green;
+            margin: 0px;
+            color: honeydew;
+            text-align: left;
+            padding: 0 0 5px;
+            height: 40px;
+        }
+        
+        .c1 {
+            display: inline-block;
+            height: 40px;
+            position: fixed;
+            top: 3px;
+            left: 2px;
+        }
+        
+        .c2 {
+            display: inline-block;
+            padding: 1px 10px 30px 2px;
+            position: fixed;
+            left: 50px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 40px;
+        }
+        
+        form {
+            text-align: center;
+        }
+        
+        h3 {
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        input {
+            padding: 10px 25px;
+            width: 250px;
+            border-radius: 2px;
+            border: 1px solid gray;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 25%;
+        }
+        
+        .in1 {
+            border-radius: 4px;
+            border: green 5px solid;
+            color: white;
+            background-color: green;
+            padding: 7px 185px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*a{
+
+text-decoration: none;
+border-radius: 4px;
+border: green 5px solid;
+color: white;
+background-color: green;
+padding: 7px 155px;
+font-family:Arial, Helvetica, sans-serif;
+
+
+}*/
+    </style>
+</head>
+
+<body>
+
+    <script>
+        var lim = 3;
+
+        function myLogin() {
+            var username = document.getElementById("user_id").value;
+            var password = document.getElementById("pass").value;
+
+            alert(`UserName: ${username} Password: ${password}`);
+
+            if (username == "Ali" && password == "123") {
+                alert("Congratulation! Login Succesfull");
+
+
+            } else {
+
+
+
+                if (lim == 0) {
+
+                    alert("Now you cannot login");
+                } else {
+                    lim = lim - 1;
+                    alert("Login attempts" + " " + lim + " " + "left");
+                    if (lim == 0) {
+                        alert("Disabled");
+                        document.getElementById("user_id").disabled = true;
+                        document.getElementById("pass").disabled = true;
+                        document.getElementById("form").disabled = true;
+
+                    }
+
+                }
+            }
+            return false;
+
+        }
+    </script>
+
+    <div>
+        <img class="c1" src="http://www.hitechgroup.pk/images/oilslogo.png">
+        <p class="c2">Hi Tech Edible Oil</p>
+    </div>
+    <form id="form">
+        <br><br><br>
+        <h3><b>Login<b></h3>
+        <br>
+        
+            <input type="text" id="user_id" name="user_id" placeholder="User Id"><br><br>
+            
+            
+        
+            <input type="password" id="pass" name="pass" placeholder="Password" >
+         <br><br>
+            <button class="in1" type="submit" onclick=" return myLogin()">Login</button>
+         
+        
+         </form>
+        
+</body>
+
+</html>
